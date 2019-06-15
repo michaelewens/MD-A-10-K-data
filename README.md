@@ -1,17 +1,17 @@
 # MD&A text from 10-K filings
 
-This repository contains an "index" file that can be used to process the raw MD&A data parsed [using this code](https://github.com/apodobytko/10K-MDA-Section). 
+This repository contains an "index" file that can be used to process the raw MD&A data parsed [using this code](https://github.com/apodobytko/10K-MDA-Section).   After following the simple instructions below, you can have your own panel database of public firm MD&A text.
 
-Ideally, we would have provided a file or SQL dump with the structure `(cik, date, MD&A_text)`.  But that file would have been enormous to store (that last column can be huge). 
+If you don't want to run the scraper code yourself -- it takes days -- then you can follow the instructions below to get MD&A data.   The basic idea is to have the local, already-scraped MD&A sections as text files and grab the ones that you need using the index file and your programming language of choice. The resulting data will be `(cik, filing_date, MD&A_text)`.  
 
-If you don't want to run the scraper code yourself -- it takes days -- then you can follow the instructions below to get MD&A data.   The basic idea is to have the local, already-scraped MD&A sections and grab the ones that you need using the index file and your programming language of choice. The resulting data will be `(cik, filing_date, MD&A_text)`.  Alternatively, you can use the index file as the set of links to all the 10-Ks that were used to create the data. 
+Note that this repository does not actually have the `txt` files of MD&A text.  See the instructions below for the temporary solution to that problem.
 
 Please cite Ewens, Peters and Wang (2019) work "[Acquisition prices and the measurement of intangible capital](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3287437)" if you use the data and make sure to check the license rules.  
 
 ## How to use the index file to build your data
 
 - load the csv [index file](https://github.com/michaelewens/md_n_a_10K/blob/master/downloadindex.csv)
-- the columns `filing` is a mapping to the raw text files associated with the 10-K scrape.   So for row 6 is that file, the respective txt file is `5.txt`
+- the column `filing` is a mapping to the raw text files associated with the 10-K scrape.   So for row 6 is that file, the respective txt file is `5.txt`
 - email Mike Ewens -- mewens@caltech.edu -- for a link to the big zip file of txt files (they are too big for Github).  If you have any suggestions of good (affordable) places to host the 10gb of data, please let me know.
 - put those files in a folder with your code
 - grab the `CIK` and dates that you need from the index and write some code in your language of choice to get the text files.  Example below for Stata.
