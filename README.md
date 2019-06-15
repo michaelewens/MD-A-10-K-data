@@ -14,7 +14,7 @@ Please cite Ewens, Peters and Wang (2019) work "[Acquisition prices and the meas
 - the column `filing` is a mapping to the raw text files associated with the 10-K scrape.   So for row 6 is that file, the respective txt file is `5.txt`
 - email Mike Ewens -- mewens@caltech.edu -- for a link to the big zip file of txt files (they are too big for Github).  If you have any suggestions of good (affordable) places to host the 10gb of data, please let me know.
 - put those files in a folder with your code
-- grab the `CIK` and dates that you need from the index and write some code in your language of choice to get the text files.  Example below for Stata.
+- grab the `CIK` and dates that you need from the index and write some code in your language of choice to get the text files.  Example below for Stata and a reference to the Python code from the original scraper.
 
 ## Do file example
 
@@ -44,8 +44,17 @@ gen filename = filing + ".txt"
 
 **** DO WHAT YOU WANT HERE
   * Now you have a list of file names associated with each row of interest
-  * You could import each filename in a loop and save as a variable...thay can get big VERY fast, so be careful
+
+global importfolder "~/Link/To/MDNA_text/files"
+global filelist : dir "$importfolder"  *.txt
+ * Now we have the file list to do your magic on
+ 
+* You could import each filename in a loop and save as a variable...thay can get big VERY fast, so be careful
 ```
+
+## Python code
+
+The [original scraper](https://github.com/apodobytko/10K-MDA-Section) has an "MDA Cleaner and Tone Calculator.py" script that can be modified to your liking.  The main pieces are `with open(download, 'r') as txtfile:` and the `NEGATIVE` or `POSITIVE` definitions.  This repository also has the python script for Ewens, Peters and Wang (2019), which was interested in counts of words, rather than tone.  
 
 ## Bibtex citation
 
