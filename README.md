@@ -12,7 +12,7 @@ Please cite Ewens, Peters and Wang (2019) work "[Acquisition prices and the meas
 
 - load the csv [index file](https://github.com/michaelewens/md_n_a_10K/blob/master/downloadindex.csv)
 - the columns `filing` is a mapping to the raw text files associated with the 10-K scrape.   So for row 6 is that file, the respective txt file is `5.txt`
-- email Mike Ewens -- mewens@caltech.edu -- for a link to the big zip file of txt files (they are too big for Github)
+- email Mike Ewens -- mewens@caltech.edu -- for a link to the big zip file of txt files (they are too big for Github).  If you have any suggestions of good (affordable) places to host the 10gb of data, please let me know.
 - put those files in a folder with your code
 - grab the `CIK` and dates that you need from the index and write some code in your language of choice to get the text files.  Example below for Stata.
 
