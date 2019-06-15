@@ -10,7 +10,7 @@ Please cite Ewens, Peters and Wang (2019) work "[Acquisition prices and the meas
 
 ## How to use the index file to build your data
 
-- load the csv [index file](https://github.com/michaelewens/md_n_a_10K/blob/master/download_log_filelist.csv).  This file is a simple list of the file names of MD&A text.  Note that you could probably just get the full set of statements, run save the output of `ls` or similar to a variable and loop over the files.  
+- load the txt [index file](https://github.com/michaelewens/md_n_a_10K/blob/master/download_log_filelist.csv).  This file is a simple list of the file names of MD&A text from the original download.  Note that you could probably just get the full set of statements, save the output of `ls` or similar to a variable and loop over the files.  
 - the column `Filer` is a mapping to the raw text files associated with the 10-K scrape.   So for row 6 is that file, the respective txt file is `119173.txt`
 - email Mike Ewens -- mewens@caltech.edu -- for a link to the big zip file of txt files (they are too big for Github).  The file will be posted somewhere soon.
 - put those files in a folder with your code
