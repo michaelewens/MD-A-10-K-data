@@ -1,6 +1,6 @@
 # MD&A text from 10-K filings
 
-This repository contains an "index" file that can be used to process the raw MD&A data parsed [using this code](https://github.com/apodobytko/10K-MDA-Section).   After following the simple instructions below, you can have your own panel database of public firm MD&A text.
+This repository contains an "index" file that can be used to process the raw MD&A data parsed [using this code](https://github.com/apodobytko/10K-MDA-Section).[[1]]   After following the simple instructions below, you can have your own panel database of public firm MD&A text.
 
 If you don't want to run the scraper code yourself -- it takes days -- then you can follow the instructions below to get MD&A data.   The basic idea is to have the local, already-scraped MD&A sections as text files and grab the ones that you need using the index file and your programming language of choice. The resulting data will be `(File,CompanyName,CIK,SIC,ReportDate,Section,Extracted_info)`.  
 
@@ -10,8 +10,8 @@ Please cite Ewens, Peters and Wang (2019) work "[Acquisition prices and the meas
 
 ## How to use the index file to build your data
 
-- load the txt [index file](https://github.com/michaelewens/md_n_a_10K/blob/master/download_log_filelist.csv).  This file is a simple list of the file names of MD&A text from the original download.  Note that you could probably just get the full set of statements, save the output of `ls` or similar to a variable and loop over the files.  
-- the column `Filer` is a mapping to the raw text files associated with the 10-K scrape.   So for row 6 is that file, the respective txt file is `119173.txt`
+- load the txt [index file](https://github.com/michaelewens/md_n_a_10K/blob/master/download_log_filelist.txt).  This file is a simple list of the file names of MD&A text from the original download.  Note that you could probably just get the full set of statements, save the output of `ls` or similar to a variable and loop over the files.  
+- the column `Filer` is a mapping to the raw text files associated with the 10-K scrape.   So for row 6 in that file, the respective txt file is `119173.txt`
 - email Mike Ewens -- mewens@caltech.edu -- for a link to the big zip file of txt files (they are too big for Github).  The file will be posted somewhere soon.
 - put those files in a folder with your code
 - use the Python script -- or your code of choice -- to loop through the text files and grab what you need.  The text files have headers (unfortunately, sometimes more than one because data) like this:
@@ -77,3 +77,5 @@ personnel = ["key personnel", "personnel","talented employee", "key talent"]
  year={2018}
  }
 ```
+
+[[1]]This is a fork of [another project](https://github.com/rflugum/10K-MDA-Section) that we had trouble getting to fuction.
