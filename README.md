@@ -6,7 +6,7 @@ If you don't want to run that code yourself -- it takes days -- then you can fol
 
 ## How to use the index
 
-- load the csv [index file](LINK)
+- load the csv [index file](https://github.com/michaelewens/md_n_a_10K/blob/master/downloadindex.csv)
 - the columns `filing` is a mapping to the raw text files associated with the 10-K scrape.   So for row 6 is that file, the respective txt file is `5.txt`
 - email Mike Ewens -- mewens@caltech.edu -- for a link to the big zip file of txt files (they are too big for Github)
 - put those files in a folder with your code
@@ -18,9 +18,23 @@ If you don't want to run that code yourself -- it takes days -- then you can fol
 * Make sure that the folder of text files is somewhere 
 cd ~/Link/To/MDNA_text/
 
-# Load the index
-insheet using XXX.csv, comma clear
+* Fake data on my CIKs, years of interest
+insheet using "my_cik_years.csv", comma clear
+tempfile my_comps
+save `my_comps'
 
-# 
+* Load the index (you have downloaded it already)
+insheet using "downloadindex.csv", comma clear
+gen fd = date(filingdate, "DMY", 2018)
+gen year = year(fd)
+*  Keep the ones that we want
+merge m:1 cik year using `my_comp', keep(3) nogen
 
+* Filenames (this is the "trick")
+tostring filing, force replace
+gen filename = filing + ".txt"
+
+**** DO WHAT YOU WANT HERE
+  * Now you have a list of file names associated with each row of interest
+  * You could import each filename in a loop and save as a variable...thay can get big VERY fast, so be careful
 ```
