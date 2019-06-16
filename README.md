@@ -1,12 +1,12 @@
 # MD&A text from 10-K filings
 
-This repository contains an "index" file that can be used to process the raw MD&A data parsed [using this code](https://github.com/apodobytko/10K-MDA-Section).[[1]]   After following the simple instructions below, you can have your own panel database of public firm MD&A text.
+This repository contains an "index" file that can be used to process the raw MD&A data parsed [using this code](https://github.com/apodobytko/10K-MDA-Section), which is a fork/update of [this repo](https://github.com/rflugum/10K-MDA-Section).   After following the instructions below, you can have your own panel database of public firm MD&A text.
 
-If you don't want to run the scraper code yourself -- it takes days -- then you can follow the instructions below to get MD&A data.   The basic idea is to have the local, already-scraped MD&A sections as text files and grab the ones that you need using the index file and your programming language of choice. The resulting data will be `(File,CompanyName,CIK,SIC,ReportDate,Section,Extracted_info)`.  
+If you don't want to run the scraper code yourself ([this](https://github.com/apodobytko/10K-MDA-Section) or [this](https://github.com/rflugum/10K-MDA-Section))-- it takes days -- then you can follow the instructions below to get the raw MD&A data gathered for [Ewens, Peters and Wang (2019)](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3287437).   The basic idea is to have the local, already-scraped MD&A sections as text files and grab the ones that you need using the index file and your programming language of choice. The resulting data will be `(File,CompanyName,CIK,SIC,ReportDate,Section,Extracted_info)`.  
 
 Note that this repository does not actually have the `txt` files of MD&A text.  See the instructions below for the temporary solution to that problem.
 
-Please cite Ewens, Peters and Wang (2019) work "[Acquisition prices and the measurement of intangible capital](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3287437)" if you use the data and make sure to check the license rules.  
+Please cite Ewens, Peters and Wang (2019) work "[Acquisition prices and the measurement of intangible capital](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3287437)" if you use the data,  [Berns, Bick, Flugum and Houston](https://sites.google.com/site/ryanflugum/research/tone-changes-and-m-a) if you use the scraper and make sure to check the license rules for either.  
 
 ## How to use the index file to build your data
 
@@ -76,5 +76,3 @@ personnel = ["key personnel", "personnel","talented employee", "key talent"]
  year={2018}
  }
 ```
-
-[[1]]This is a fork of [another project](https://github.com/rflugum/10K-MDA-Section) that we had trouble getting to fuction.
