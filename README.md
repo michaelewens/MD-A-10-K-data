@@ -1,6 +1,10 @@
 # MD&A text from 10-K filings
 
-This repository contains an "index" file that can be used to process the raw MD&A data parsed [using this code](https://github.com/apodobytko/10K-MDA-Section), which is a fork/update of [this repo](https://github.com/rflugum/10K-MDA-Section).   After following the instructions below, you can have your own panel database of public firm MD&A text.
+This repository contains an "index" file that can be used to process the raw MD&A data parsed [using this code](https://github.com/apodobytko/10K-MDA-Section), which is a fork/update of [this repo](https://github.com/rflugum/10K-MDA-Section).   After following the instructions below, you can have your own panel database of public firm MD&A text.  
+
+As an example of how this data can be used, Ewens, Peters and Wang (2019) searched all the MD&A sections for references to personnel or human capital risk (following Eisfeldt and Papanikolaou, 2013) to sort public firms and compare their organizational capital stocks:
+
+![Org. stock sorts](https://github.com/michaelewens/MD-A-10K/blob/master/example_analysis.png)
 
 If you don't want to run the scraper code yourself ([this](https://github.com/apodobytko/10K-MDA-Section) or [this](https://github.com/rflugum/10K-MDA-Section))-- it takes days -- then you can follow the instructions below to get the raw MD&A data gathered for [Ewens, Peters and Wang (2019)](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3287437).   The basic idea is to have the local, already-scraped MD&A sections as text files and grab the ones that you need using the index file and your programming language of choice. The resulting data will be `(File,CompanyName,CIK,SIC,ReportDate,Section,Extracted_info)`.  
 
