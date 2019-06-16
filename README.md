@@ -14,7 +14,7 @@ Please cite Ewens, Peters and Wang (2019) work "[Acquisition prices and the meas
 - the column `Filer` is a mapping to the raw text files associated with the 10-K scrape.   So for row 6 in that file, the respective txt file is `119173.txt`
 - download the [txt files from here](https://data.caltech.edu/records/1249) (they are too big for Github).   For space reasons, the files were split into folders.  They will have to be combined into one folder if the code below is to work.
 - We ask that this data not be forwarded on to others.  This ensures that everyone receives the latest version of the data that's available.
-- use the Python script -- or your code of choice -- to loop through the text files and grab what you need.  The text files have headers (unfortunately, sometimes more than one because data) like this:
+- use the [Python script](https://github.com/michaelewens/MD-A-10K/blob/master/example_procesing.py) -- or your code of choice -- to loop through the text files and grab what you need.  The text files have headers (unfortunately, sometimes more than one because data) like this:
 
 ```
 <HEADER>
