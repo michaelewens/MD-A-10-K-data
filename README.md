@@ -12,7 +12,7 @@ Please cite Ewens, Peters and Wang (2019) work "[Acquisition prices and the meas
 
 - load the txt [index file](https://github.com/michaelewens/md_n_a_10K/blob/master/download_log_filelist.txt).  This file is a simple list of the file names of MD&A text from the original download.  Note that you could probably just get the full set of statements, save the output of `ls` or similar to a variable and loop over the files.  
 - the column `Filer` is a mapping to the raw text files associated with the 10-K scrape.   So for row 6 in that file, the respective txt file is `119173.txt`
-- email Mike Ewens -- mewens@caltech.edu -- for a link to the big zip file of txt files (they are too big for Github).  The file will be posted somewhere soon.
+- email Mike Ewens -- mewens@caltech.edu -- for a link to the big zip file of txt files (they are too big for Github).  The file will be posted somewhere soon.  We ask that this data not be forwarded on to others.  This ensures that everyone receives the latest version of the data that's available.
 - put those files in a folder with your code
 - use the Python script -- or your code of choice -- to loop through the text files and grab what you need.  The text files have headers (unfortunately, sometimes more than one because data) like this:
 
