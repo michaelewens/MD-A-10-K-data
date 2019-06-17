@@ -1,5 +1,7 @@
 # MD&A text from 10-K filings
 
+[![DOI](https://data.caltech.edu/badge/192034546.svg)](https://data.caltech.edu/badge/latestdoi/192034546)
+
 This repository contains an "index" file that can be used to process the raw MD&A data parsed [using this code](https://github.com/apodobytko/10K-MDA-Section), which is a fork/update of [this repo](https://github.com/rflugum/10K-MDA-Section).   After following the instructions below, you can have your own panel database of public firm MD&A text.  
 
 As an example of how this data can be used, Ewens, Peters and Wang (2019) searched all the MD&A sections for references to personnel or human capital risk (following Eisfeldt and Papanikolaou, 2013) to sort public firms and compare their organizational capital stocks:
