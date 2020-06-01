@@ -14,7 +14,7 @@ Please cite Ewens, Peters and Wang (2019) work "[Acquisition prices and the meas
 
 ## How to use the index file to build your data
 
-- load the txt [index file](https://github.com/michaelewens/md_n_a_10K/blob/master/download_log_filelist.txt).  This file is a simple list of the file names of MD&A text from the original download.  Note that you could probably just get the full set of statements, save the output of `ls` or similar to a variable and loop over the files.  
+- load the txt [index file](https://github.com/michaelewens/MD-A-10-K-data/blob/master/mda_sections.csv).  This file is a simple list of the file names of MD&A text from the original download.  Note that you could probably just get the full set of statements, save the output of `ls` or similar to a variable and loop over the files.  
 - the column `Filer` is a mapping to the raw text files associated with the 10-K scrape.   So for row 6 in that file, the respective txt file is `119173.txt`
 - download the [txt files from here](https://data.caltech.edu/records/1249) (they are too big for Github).   For space reasons, the files were split into folders.  They will have to be combined into one folder if the code below is to work.
 - We ask that this data not be forwarded on to others.  This ensures that everyone receives the latest version of the data that's available.
@@ -40,11 +40,9 @@ So with the `txt` file loaded, all the identifying information is available.
 cd ~/Link/To/MDNA_text/
 
 * Load the index (you have downloaded it already)
-insheet using "download_log_filelist.txt", tab clear
+insheet using "mda_sections.csv", tab clear
 
-* Filenames (this is the "trick")
-tostring filer, force replace
-gen filename = filer + ".txt"
+** fileName == variable of interest!
 
 **** DO WHAT YOU WANT HERE
   * Now you have a list of file names associated with each row of interest
@@ -74,9 +72,9 @@ personnel = ["key personnel", "personnel","talented employee", "key talent"]
 
 ```
 @article{ewensPetersWang2018,
- title={Acquisition prices and the measurement of intangible capital},
+ title={Measuring Intangible Capital with Market Prices },
  author={Ewens, Michael and Peters, Ryan and Wang, Sean},
  journal={Working Paper}
- year={2018}
+ year={2019}
  }
 ```
