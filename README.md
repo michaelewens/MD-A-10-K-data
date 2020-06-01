@@ -42,7 +42,7 @@ cd ~/Link/To/MDNA_text/
 * Load the index (you have downloaded it already)
 insheet using "mda_sections.csv", tab clear
 
-** fileName == variable of interest!
+** Filer == variable of interest!
 
 **** DO WHAT YOU WANT HERE
   * Now you have a list of file names associated with each row of interest
