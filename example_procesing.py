@@ -55,8 +55,8 @@ with open(download, 'r') as txtfile:
         FileNUM=line[0].strip()
         Sections=int(line[1].strip())
         if Sections!=0:
-            Filer=os.path.join(filepath,str(FileNUM)+".txt")
-            CLEAN=os.path.join(filepath3,str(FileNUM)+".txt")
+            Filer=os.path.join(filepath,str(FileNUM))
+            CLEAN=os.path.join(filepath3,str(FileNUM))
             SIC=""
             Info=[str(FileNUM)]
             hand=open(Filer)
