@@ -1,0 +1,23 @@
+{
+  "@context": "https://doi.org/10.5063/schema/codemeta-2.0",
+  "@type": "SoftwareSourceCode",
+  "codeRepository": "https://github.com/michaelewens/MD-A-10K",
+  "name": "MD-A-10K",
+  "issueTracker": "https://github.com/michaelewens/MD-A-10K/issues",
+  "license": "https://spdx.org/licenses/MI",
+  "version": "v0.0.1",
+  "name": "MD&A statements from public firms: 2002-2018",
+  "authors": [
+    {
+      "nameType": "Personal",
+      "name": "Ewens, Michael",
+      "givenName": "Michael",
+      "familyName": "Ewens",
+      "affiliation": "Caltech"
+    }
+  ],
+  "description": "Text and headers from MD&A sections found in public firm 10-K statements.",
+  "keywords": [
+    "finance", "text", "disclosure", "risks"
+  ]
+}
