@@ -2,15 +2,15 @@
 
 This repository contains an "index" file that can be used to process the raw MD&A data parsed [using this code](https://github.com/apodobytko/10K-MDA-Section), which is a fork/update of [this repo](https://github.com/rflugum/10K-MDA-Section).   After following the instructions below, you can have your own panel database of public firm MD&A text.  
 
-As an example of how this data can be used, Ewens, Peters and Wang (2019) searched all the MD&A sections for references to personnel or human capital risk (following Eisfeldt and Papanikolaou, 2013) to sort public firms and compare their organizational capital stocks:
+As an example of how this data can be used, Ewens, Peters and Wang (2023) searched all the MD&A sections for references to personnel or human capital risk (following Eisfeldt and Papanikolaou, 2013) to sort public firms and compare their organizational capital stocks:
 
 ![Org. stock sorts](https://github.com/michaelewens/MD-A-10K/blob/master/example_analysis.png)
 
-If you don't want to run the scraper code yourself ([this](https://github.com/apodobytko/10K-MDA-Section) or [this](https://github.com/rflugum/10K-MDA-Section))-- it takes days -- then you can follow the instructions below to get the raw MD&A data gathered for [Ewens, Peters and Wang (2019)](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3287437).   The basic idea is to have the local, already-scraped MD&A sections as text files and grab the ones that you need using the index file and your programming language of choice. The resulting data will be `(File,CompanyName,CIK,SIC,ReportDate,Section,Extracted_info)`.  
+If you don't want to run the scraper code yourself ([this](https://github.com/apodobytko/10K-MDA-Section) or [this](https://github.com/rflugum/10K-MDA-Section))-- it takes days -- then you can follow the instructions below to get the raw MD&A data gathered for [Ewens, Peters and Wang (2023)](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3287437).   The basic idea is to have the local, already-scraped MD&A sections as text files and grab the ones that you need using the index file and your programming language of choice. The resulting data will be `(File,CompanyName,CIK,SIC,ReportDate,Section,Extracted_info)`.  
 
 Note that this repository does not actually have the `txt` files of MD&A text.  See the instructions below for the temporary solution to that problem.
 
-Please cite Ewens, Peters and Wang (2019) work "[Acquisition prices and the measurement of intangible capital](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3287437)" if you use the data,  [Berns, Bick, Flugum and Houston](https://sites.google.com/site/ryanflugum/research/tone-changes-and-m-a) if you use the scraper and make sure to check the license rules for either.  
+Please cite Ewens, Peters and Wang (2023) work "[Measuring Intangible Capital with Market Prices](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3287437)" if you use the data,  [Berns, Bick, Flugum and Houston](https://sites.google.com/site/ryanflugum/research/tone-changes-and-m-a) if you use the scraper and make sure to check the license rules for either.  
 
 ## How to use the index file to build your data
 
@@ -71,10 +71,10 @@ personnel = ["key personnel", "personnel","talented employee", "key talent"]
 ## Bibtex citation
 
 ```
-@article{ewensPetersWang2018,
+@article{ewensPetersWang2023,
  title={Measuring Intangible Capital with Market Prices },
  author={Ewens, Michael and Peters, Ryan and Wang, Sean},
  journal={Working Paper}
- year={2019}
+ year={2023}
  }
 ```
