@@ -58,7 +58,7 @@ global filelist : dir "$importfolder"  *.txt
 
 ## Python code
 
-The [original scraper](https://github.com/apodobytko/10K-MDA-Section) has an "MDA Cleaner and Tone Calculator.py" script that can be modified to your liking.  The main pieces are `with open(download, 'r') as txtfile:` and the `NEGATIVE` or `POSITIVE` definitions.  This repository also has the [python script](https://github.com/michaelewens/md_n_a_10K/blob/master/example_procesing.py) for Ewens, Peters and Wang (2019), which was interested in counts of words, rather than tone.  
+The [original scraper](https://github.com/apodobytko/10K-MDA-Section) has an "MDA Cleaner and Tone Calculator.py" script that can be modified to your liking.  The main pieces are `with open(download, 'r') as txtfile:` and the `NEGATIVE` or `POSITIVE` definitions.  This repository also has the [python script](https://github.com/michaelewens/md_n_a_10K/blob/master/example_procesing.py) for Ewens, Peters and Wang (2024, citation below), which was interested in counts of words, rather than tone.  
 
 Here are the keywords that we searched for
 
