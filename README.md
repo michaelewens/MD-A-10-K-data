@@ -2,7 +2,7 @@
 
 This repository contains an "index" file that can be used to process the raw MD&A data parsed [using this code](https://github.com/apodobytko/10K-MDA-Section), which is a fork/update of [this repo](https://github.com/rflugum/10K-MDA-Section).   After following the instructions below, you can have your own panel database of public firm MD&A text.  
 
-As an example of how this data can be used, Ewens, Peters and Wang (2023) searched all the MD&A sections for references to personnel or human capital risk (following Eisfeldt and Papanikolaou, 2013) to sort public firms and compare their organizational capital stocks:
+As an example of how this data can be used, Ewens, Peters and Wang (2024) searched all the MD&A sections for references to personnel or human capital risk (following Eisfeldt and Papanikolaou, 2013) to sort public firms and compare their organizational capital stocks:
 
 ![Org. stock sorts](https://github.com/michaelewens/MD-A-10-K-data/blob/5efc8cfb9105de493c6b97d49433c7103066eb68/example_analysis2023.png)
 
@@ -71,10 +71,10 @@ personnel = ["key personnel", "personnel","talented employee", "key talent"]
 ## Bibtex citation
 
 ```
-@article{ewensPetersWang2023,
+@article{ewensPetersWang2024,
  title={Measuring Intangible Capital with Market Prices },
  author={Ewens, Michael and Peters, Ryan and Wang, Sean},
- journal={Working Paper}
- year={2023}
+ journal={Management Science}
+ year={2024}
  }
 ```
