@@ -1,5 +1,7 @@
 # MD&A text from 10-K filings
 
+[![DOI](https://data.caltech.edu/badge/192034546.svg)](https://data.caltech.edu/badge/latestdoi/192034546)
+
 This repository contains an "index" file that can be used to process the raw MD&A data parsed [using this code](https://github.com/apodobytko/10K-MDA-Section), which is a fork/update of [this repo](https://github.com/rflugum/10K-MDA-Section).   After following the instructions below, you can have your own panel database of public firm MD&A text.  
 
 As an example of how this data can be used, Ewens, Peters and Wang (2024) searched all the MD&A sections for references to personnel or human capital risk (following Eisfeldt and Papanikolaou, 2013) to sort public firms and compare their organizational capital stocks:
@@ -16,7 +18,7 @@ Please cite Ewens, Peters and Wang (2023) work "[Measuring Intangible Capital wi
 
 - load the txt [index file](https://github.com/michaelewens/MD-A-10-K-data/blob/master/mda_sections.csv).  This file is a simple list of the file names of MD&A text from the original download.  Note that you could probably just get the full set of statements, save the output of `ls` or similar to a variable and loop over the files.  
 - the column `Filer` is a mapping to the raw text files associated with the 10-K scrape.   So for row 6 in that file, the respective txt file is `119173.txt`
-- download the [txt files from here](https://data.caltech.edu/records/1249) (they are too big for Github).   For space reasons, the files were split into folders.  They will have to be combined into one folder if the code below is to work.
+- download the [txt files from here](https://doi.org/10.22002/D1.1249) (they are too big for GitHub).   For space reasons, the files were split into folders.  They will have to be combined into one folder if the code below is to work.
 - We ask that this data not be forwarded on to others.  This ensures that everyone receives the latest version of the data that's available.
 - use the [Python script](https://github.com/michaelewens/MD-A-10K/blob/master/example_procesing.py) -- or your code of choice -- to loop through the text files and grab what you need.  The text files have headers (unfortunately, sometimes more than one because data) like this:
 
